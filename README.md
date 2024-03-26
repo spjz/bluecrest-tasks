@@ -23,13 +23,12 @@ RESPONSE BODY:
 ``json
 [
     'data': [
-        [
+        *: [
             'id': int,
             'title': string,
             'description': string,
             'due_date': string,
             'status': int
-            'created_at': datetime,
         ]
     ]
 ]
@@ -47,8 +46,8 @@ RESPONSE BODY:
         'title': string,
         'description': string,
         'due_date': string,
-        'status': int
-        'created_at': datetime,
+        'status': string
+        'user_id': int
     ]
 ]
 ``
@@ -59,26 +58,25 @@ Create new task resource by submitting JSON data
 REQUEST BODY:
 ``json
 {
-    title: string,
-    description: string,
-    due_date: string,
-    status: int
+    'title': string,
+    'description': string,
+    'due_date': string,
+    'status': string
+    'user_id': int
 }
 ``
 
-RESPONSE CODE: `200`
+RESPONSE CODE: `201`
 RESPONSE BODY:
 ``json
 [
     'data': [
-        [
-            'id': int,
-            'title': string,
-            'description': string,
-            'due_date': string,
-            'status': int
-            'created_at': datetime,
-        ]
+        'id': int,
+        'title': string,
+        'description': string,
+        'due_date': string,
+        'status': string
+        'user_id': int
     ]
 ]
 ``
